@@ -1,0 +1,24 @@
+<launch>
+
+    <!-- Arguments with defaults -->
+    <arg name="input_topic" 
+        default="/map" 
+        description="Input PointCloud2 topic"
+    />
+
+    <arg name="output_directory"
+        default="src/terrain_map_tools/pcd"
+        description="Directory where PCD files will be saved"
+    />
+
+    <!-- Node -->
+    <node pkg="terrain_map_tools"
+        exec="pointcloud_to_pcd"
+        name="pointcloud_to_pcd"
+        output="screen"
+    >
+        <param name="input_topic" value="$(var input_topic)" />
+        <param name="output_directory" value="$(var output_directory)" />
+    </node>
+
+</launch>
