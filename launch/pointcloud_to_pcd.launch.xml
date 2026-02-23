@@ -7,12 +7,12 @@
     />
 
     <arg name="output_directory"
-        default="src/terrain_map_tools/pcd"
+        default="src/pointcloud_to_pcd/pcd"
         description="Directory where PCD files will be saved"
     />
 
     <!-- Node -->
-    <node pkg="terrain_map_tools"
+    <node pkg="pointcloud_to_pcd"
         exec="pointcloud_to_pcd"
         name="pointcloud_to_pcd"
         output="screen"

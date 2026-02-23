@@ -17,7 +17,7 @@ class PointCloudToPCDNode : public rclcpp::Node
         {
             // DeclarepParameters
             this->declare_parameter<std::string>("input_topic", "/map");
-            this->declare_parameter<std::string>("output_directory", "src/terrain_map_tools/pcd");
+            this->declare_parameter<std::string>("output_directory", "src/pointcloud_to_pcd/pcd");
 
             input_topic_ = this->get_parameter("input_topic").as_string();
             output_directory_ = this->get_parameter("output_directory").as_string();
